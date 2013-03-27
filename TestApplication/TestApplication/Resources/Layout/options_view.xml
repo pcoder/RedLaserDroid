@@ -1,0 +1,142 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <TextView
+        android:id="@+id/SDK_Version_TextField"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:text="Barcode Types" />
+    
+    <LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="48dip"
+		android:background="@android:color/background_dark"
+		android:textColor="@android:color/primary_text_dark"
+		android:gravity="center" >
+
+	     <ToggleButton android:id="@+id/toggleEAN13"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="EAN13"
+	        android:textOff="EAN13"/>
+
+	     <ToggleButton
+	         android:id="@+id/toggleEAN8"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textOff="EAN8"
+	         android:textOn="EAN8" />
+
+	     <ToggleButton android:id="@+id/toggleEAN5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="EAN5"
+	        android:textOff="EAN5"/>
+	     <ToggleButton android:id="@+id/toggleEAN2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="EAN2"
+	        android:textOff="EAN2"/>
+
+	     <ToggleButton
+	         android:id="@+id/toggleUPC"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textOff="UPC-E"
+	         android:textOn="UPC-E" />
+
+	</LinearLayout>
+
+    <LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="48dip"
+		android:background="@android:color/background_dark"
+		android:textColor="@android:color/primary_text_dark"
+		android:gravity="center" >
+
+	     <ToggleButton
+	         android:id="@+id/toggleSticky"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textOff="StickyBits"
+	         android:textOn="StickyBits" />
+
+	     <ToggleButton android:id="@+id/toggleQR"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="QR"
+	        android:textOff="QR"/>
+	     <ToggleButton android:id="@+id/toggle128"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="128"
+	        android:textOff="128"/>
+	     <ToggleButton android:id="@+id/toggle39"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="39"
+	        android:textOff="39"/>
+	     <ToggleButton android:id="@+id/toggle93"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="93"
+	        android:textOff="93"/>
+    </LinearLayout>
+	     
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="48dip"
+		android:background="@android:color/background_dark"
+		android:textColor="@android:color/primary_text_dark"
+		android:gravity="center" >
+	     <ToggleButton android:id="@+id/toggleDataMatrix"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="DataMatrix"
+	        android:textOff="DataMatrix"/>
+	     <ToggleButton android:id="@+id/toggleRSS14"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="RSS14"
+	        android:textOff="RSS14"/>
+	     <ToggleButton android:id="@+id/toggleITF"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="ITF"
+	        android:textOff="ITF"/>
+	     <ToggleButton android:id="@+id/toggleCodabar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textOn="Codabar"
+	        android:textOff="Codabar"/>
+	   </LinearLayout>
+	   
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:layout_marginTop="15dip"
+        android:text="Orientation" />
+    
+    	<ToggleButton android:id="@+id/toggleOrientation"
+	        android:layout_width="100dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dip"
+	        android:textOn="Landscape"
+	        android:textOff="Portrait"/>
+
+</LinearLayout>
