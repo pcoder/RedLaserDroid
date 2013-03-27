@@ -1,7 +1,7 @@
 RedLaserDroid
 =============
 
-This is a test Mono for android project to check whether RedLaserSDK (www.redlaser.com) can be compiled using mono. Indeed this is possible as shown in the test application. The test code uses the RLSample application Java code that comes with the RedLaserSDK. It is also possible to accomplish the same task by creating appropriate Java bindings for the libredlaser.jar file (more complicated, I tried it but it needed a lot of fixes)
+This is a test Mono for android project to check whether RedLaserSDK (www.redlaser.com) can be compiled using mono. Indeed this is possible as shown in the test application. The test code uses the RLSample application Java code that comes with the RedLaserSDK. It is also possible to accomplish the same task by creating appropriate Java bindings for the libredlaser.jar file (more complicated, I tried it but it needed a lot of fixes). The link is http://docs.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29
 
 Thanks to the following useful links:
 
