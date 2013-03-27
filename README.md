@@ -14,5 +14,8 @@ Thanks to the following useful links:
 4. http://stackoverflow.com/questions/12005296/how-to-access-monodroid-resources-from-java-file-splash-screen
 If you run into the problem "package R does not exist", you can simply hardcode the references to various resources in your java code by inspecting the generated R.java file (follow the link #3).
 
+5. http://lists.ximian.com/pipermail/monodroid/2012-February/008950.html
+Don't forget to add the libredlaser.so file to your project as a AndroidNativeLibrary!
+
 --
 purple.coder +@+ yahoo.co.uk
