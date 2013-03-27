@@ -26,8 +26,12 @@ namespace TestApplication
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
             button.Click += delegate {
+                //Intent scanIntent = new Intent(this, Java.Lang.Class.ForName("com.ebay.rlsample.RLSampleScannerActivity"));
+                //StartActivity(scanIntent);
+
                 Intent scanIntent = new Intent(this, Java.Lang.Class.ForName("com.ebay.rlsample.RLSampleScannerActivity"));
-                StartActivity(scanIntent);
+                scanIntent.PutExtra("intent_multi_scan", false);
+                StartActivityForResult(scanIntent,1);
                 button.Text = string.Format("{0} clicks!", count++); 
             };
         }

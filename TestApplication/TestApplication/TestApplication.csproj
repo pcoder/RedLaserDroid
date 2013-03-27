@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Raw\beep.ogg" />
-    <None Include="armeabi\libredlaser.so" />
+    <AndroidNativeLibrary Include="armeabi\libredlaser.so" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>

@@ -1,8 +1,8 @@
+C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\bin\Debug\TestApplication.TestApplication-Signed.apk
 C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\bin\Debug\TestApplication.dll
 C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\bin\Debug\TestApplication.pdb
 C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\bin\Debug\TestApplication.dll.mdb
 C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\bin\Debug\TestApplication.TestApplication.apk
-C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\bin\Debug\TestApplication.TestApplication-Signed.apk
 C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\obj\Debug\TestApplication.dll
 C:\Users\Ravi\git\RedLaserDroid\TestApplication\TestApplication\obj\Debug\TestApplication.pdb
