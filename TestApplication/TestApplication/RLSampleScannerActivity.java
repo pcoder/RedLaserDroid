@@ -1,12 +1,17 @@
 package com.ebay.rlsample;
 
+import RLSDK.b;
+import RLSDK.b.c;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
+import java.util.ArrayList;
+import java.util.Collection;
 
 import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -63,19 +68,19 @@ public class RLSampleScannerActivity extends BarcodeScanActivity
     	
     	 // Here we can set what types of barcode to scan
         enabledTypes.setUpce(prefs.getBoolean(Options.OPTIONS_UPCE, true));
-        enabledTypes.setEan2(prefs.getBoolean(Options.OPTIONS_EAN2, false));
-        enabledTypes.setEan5(prefs.getBoolean(Options.OPTIONS_EAN5, false));
-        enabledTypes.setEan8(prefs.getBoolean(Options.OPTIONS_EAN8, false));
-        enabledTypes.setEan13(prefs.getBoolean(Options.OPTIONS_EAN13, false));
-        enabledTypes.setQRCode(prefs.getBoolean(Options.OPTIONS_QRCODE, false));
-        enabledTypes.setCode128(prefs.getBoolean(Options.OPTIONS_CODE128, false));
-        enabledTypes.setCode39(prefs.getBoolean(Options.OPTIONS_CODE39, false));
-        enabledTypes.setCode93(prefs.getBoolean(Options.OPTIONS_CODE93, false));
-        enabledTypes.setDataMatrix(prefs.getBoolean(Options.OPTIONS_DATAMATRIX, false));
-        enabledTypes.setITF(prefs.getBoolean(Options.OPTIONS_ITF, false));
-        enabledTypes.setRSS14(prefs.getBoolean(Options.OPTIONS_RSS14, false));
-        enabledTypes.setSticky(prefs.getBoolean(Options.OPTIONS_STICKY, false));
-        enabledTypes.setCodabar(prefs.getBoolean(Options.OPTIONS_CODABAR, false)); 
+        enabledTypes.setEan2(prefs.getBoolean(Options.OPTIONS_EAN2, true));
+        enabledTypes.setEan5(prefs.getBoolean(Options.OPTIONS_EAN5, true));
+        enabledTypes.setEan8(prefs.getBoolean(Options.OPTIONS_EAN8, true));
+        enabledTypes.setEan13(prefs.getBoolean(Options.OPTIONS_EAN13, true));
+        enabledTypes.setQRCode(prefs.getBoolean(Options.OPTIONS_QRCODE, true));
+        enabledTypes.setCode128(prefs.getBoolean(Options.OPTIONS_CODE128, true));
+        enabledTypes.setCode39(prefs.getBoolean(Options.OPTIONS_CODE39, true));
+        enabledTypes.setCode93(prefs.getBoolean(Options.OPTIONS_CODE93, true));
+        enabledTypes.setDataMatrix(prefs.getBoolean(Options.OPTIONS_DATAMATRIX, true));
+        enabledTypes.setITF(prefs.getBoolean(Options.OPTIONS_ITF, true));
+        enabledTypes.setRSS14(prefs.getBoolean(Options.OPTIONS_RSS14, true));
+        enabledTypes.setSticky(prefs.getBoolean(Options.OPTIONS_STICKY, true));
+        enabledTypes.setCodabar(prefs.getBoolean(Options.OPTIONS_CODABAR, true)); 
         
         // To Remove the Title bar from RedLaserSDK Activity, add the NoTitleBar Theme in your Android Manifest.
         // Remove the Status Bar from this window.
@@ -190,7 +195,7 @@ public class RLSampleScannerActivity extends BarcodeScanActivity
 			if (!isMultiScan)
 			{
 				// If we're in single scan mode and we've found something, we're done.
-				doneScanning();
+				MydoneScanning(allResults);
 			}
 		}
 		
@@ -263,6 +268,26 @@ public class RLSampleScannerActivity extends BarcodeScanActivity
 				}
 			}
 		}
+	}
+
+	private void MydoneScanning(Set<BarcodeResult> data){
+	    Object localObject = data;
+
+    Intent localIntent = new Intent();
+
+    if ((b.a() == b.c.c) || (b.a() == b.c.e))
+    {
+      setResult(0, localIntent);
+    }
+    else {
+      localObject = new ArrayList((Collection)localObject);
+	  //localIntent.putParcelableArrayListExtra("com.ebay.redlasersdk.results", (ArrayList)localObject);
+      localIntent.putExtra("com.ebay.redlasersdk.barcode", ((BarcodeResult)((ArrayList)localObject).get(0)).barcodeString);
+	  localIntent.putExtra("com.ebay.redlasersdk.barcodetype", ((BarcodeResult)((ArrayList)localObject).get(0)).getBarcodeType());
+      setResult(-1, localIntent);
+    }
+
+    finish();
 	}
 	
 	/** BarcodeScanActivity queries this method during onCreate() to determine which

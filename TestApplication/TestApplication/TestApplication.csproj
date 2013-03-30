@@ -90,6 +90,7 @@
     <AndroidResource Include="Resources\Drawable\redlaser_logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\RedLaser_License.xml" />
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

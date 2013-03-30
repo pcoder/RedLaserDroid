@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Util;
+using System.Collections.Generic;
 
 namespace TestApplication
 {
@@ -31,6 +33,18 @@ namespace TestApplication
                 StartActivityForResult(scanIntent,1);
                 button.Text = string.Format("{0} clicks!", count++); 
             };
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Android.Content.Intent data)
+        {
+            if (resultCode == Result.Ok)
+            {
+                var barcode = data.GetStringExtra("com.ebay.redlasersdk.barcode");
+                var barcodeType = data.GetStringExtra("com.ebay.redlasersdk.barcodetype");
+                Log.Debug("TESTApp", "BARCODE: " + barcode);
+                new AlertDialog.Builder(this).SetTitle("Scan Result").SetMessage(barcodeType + ": " + barcode)
+                .SetNegativeButton("OK", (Dialog, whichButton) => { }).Show();
+            }
         }
     }
 }
